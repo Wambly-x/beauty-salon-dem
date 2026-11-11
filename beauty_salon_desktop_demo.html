@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#21191d">
+<title>Maison Belle — Beauty & Wellness Studio</title>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#241b20;--muted:#796c70;--cream:#faf6f2;--rose:#b8757e;--rose-light:#ead1ce;--line:#e9dfda;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:"DM Sans",Arial,sans-serif}img{display:block;width:100%;height:100%;object-fit:cover}a{color:inherit;text-decoration:none}.wrap{width:min(1240px,88%);margin:auto}
+.topbar{background:#21191d;color:#eadfdd;text-align:center;padding:9px 15px;font-size:10px;letter-spacing:2px;text-transform:uppercase}
+header{position:sticky;top:0;z-index:10;background:rgba(250,246,242,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav{height:86px;display:flex;align-items:center;justify-content:space-between;gap:28px}.brand{font-family:"Playfair Display",serif;font-size:29px;letter-spacing:-1px;white-space:nowrap}.brand span{color:var(--rose)}.navlinks{display:flex;align-items:center;gap:34px;font-size:12px;color:#65575c}.navlinks a:hover{color:var(--rose)}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--ink);color:white;padding:15px 23px;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;border:1px solid var(--ink);transition:.2s}.btn:hover{background:var(--rose);border-color:var(--rose)}.btn.outline{background:transparent;color:var(--ink)}.btn.outline:hover{color:white}
+.hero{display:grid;grid-template-columns:.88fr 1.12fr;gap:70px;align-items:center;padding:76px 0 86px;min-height:650px}.eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--rose);font-weight:700}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;font-weight:400}h1{font-size:clamp(55px,6vw,86px);line-height:1.02;letter-spacing:-2px;margin:22px 0}h1 em{color:var(--rose);font-weight:400}.hero-copy p{font-size:14px;line-height:2;color:var(--muted);max-width:440px;margin:0 0 30px}.hero-actions{display:flex;align-items:center;gap:20px}.textlink{font-size:11px;border-bottom:1px solid var(--rose);padding-bottom:5px}
+.hero-gallery{height:500px;display:grid;grid-template-columns:1.1fr .9fr;grid-template-rows:1fr 1fr;gap:13px;position:relative}.hero-gallery .mainpic{grid-row:1/3}.hero-gallery img{border-radius:2px}.hero-gallery .smallpic{min-height:0}.floating-note{position:absolute;bottom:27px;left:-32px;background:#fff;padding:17px 21px;box-shadow:0 10px 35px #39272b18;font-family:"Playfair Display",serif;font-size:16px}
+.trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;grid-template-columns:repeat(4,1fr);padding:23px 0;text-align:center}.trust div{font-size:10px;letter-spacing:1.3px;text-transform:uppercase;color:#6d5d63;border-right:1px solid var(--line)}.trust div:last-child{border:0}
+section{padding:100px 0}.section-head{text-align:center;max-width:650px;margin:0 auto 48px}.section-head h2{font-size:49px;letter-spacing:-1px;margin:13px 0}.section-head p{font-size:13px;line-height:1.9;color:var(--muted);margin:0}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.service-card{background:white;border:1px solid var(--line)}.service-img{height:265px;overflow:hidden}.service-img img{transition:transform .6s}.service-card:hover .service-img img{transform:scale(1.045)}.service-body{padding:24px 25px 27px}.service-meta{display:flex;justify-content:space-between;gap:12px;color:var(--rose);font-size:10px;letter-spacing:1.5px;text-transform:uppercase}.service-body h3{font-size:27px;margin:13px 0 8px}.service-body p{font-size:12px;line-height:1.8;color:var(--muted);min-height:44px}.service-bottom{display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:17px;margin-top:17px}.price{font-family:"Playfair Display",serif;font-size:23px}.small-link{font-size:10px;letter-spacing:1px;text-transform:uppercase;border-bottom:1px solid var(--rose);padding-bottom:4px}
+.feature{background:#f0e5df}.feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:75px;align-items:center}.feature-pics{display:grid;grid-template-columns:1fr 1fr;gap:14px;height:460px}.feature-pics img:first-child{margin-top:38px;height:85%}.feature-pics img:last-child{height:85%;align-self:end}.feature-copy h2{font-size:52px;line-height:1.1;margin:15px 0 20px}.feature-copy p{font-size:13px;color:var(--muted);line-height:2}.checks{list-style:none;padding:0;margin:25px 0 30px;display:grid;gap:13px;font-size:12px}.checks li:before{content:"✦";color:var(--rose);margin-right:12px}
+.price-section{background:#fff}.price-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}.price-group h3{font-size:29px;border-bottom:1px solid var(--line);padding-bottom:15px;margin:0 0 7px}.price-row{display:flex;justify-content:space-between;gap:20px;padding:17px 0;border-bottom:1px solid #f0e9e5;font-size:13px}.price-row span:first-child{color:#62545a}.price-row strong{font-weight:600}.price-note{text-align:center;color:var(--muted);font-size:10px;margin-top:30px}
+.gallery{display:grid;grid-template-columns:1.2fr .8fr .8fr;grid-template-rows:220px 220px;gap:13px}.gallery img{min-height:0}.gallery img:first-child{grid-row:1/3}
+.testimonial{background:#f1e6e1;text-align:center}.quote{font-family:"Playfair Display",serif;font-size:clamp(27px,3vw,39px);line-height:1.4;max-width:780px;margin:20px auto}.stars{color:var(--rose);letter-spacing:5px;font-size:14px}.reviewby{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:18px}
+.contact{background:#21191d;color:white}.contact .section-head p{color:#cbbdc1}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.contact-card{border:1px solid #594950;padding:34px}.contact-card h3{font-size:27px;margin:0 0 14px}.contact-card p{font-size:12px;line-height:2;color:#cbbdc1}.contact-card .btn{margin-top:10px;background:#fff;color:var(--ink);border-color:#fff}
+footer{background:#191216;color:#bcaeb3;padding:25px 0;font-size:10px}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.demo-tag{position:fixed;right:16px;bottom:15px;z-index:20;background:#fff;border:1px solid var(--line);padding:10px 13px;font-size:9px;letter-spacing:1px;text-transform:uppercase;box-shadow:0 5px 20px #00000012}
+@media(max-width:900px){.wrap{width:91%}.hero{gap:35px}.hero-gallery{height:420px}.navlinks{gap:17px}.feature-grid{gap:35px}.services{gap:13px}.service-img{height:210px}}
+@media(max-width:680px){.topbar{font-size:8px}.wrap{width:90%}nav{height:70px}.brand{font-size:23px}.navlinks{display:none}nav>.btn{padding:12px 13px;font-size:9px}.hero{grid-template-columns:1fr;padding:55px 0 60px;gap:36px}.hero-gallery{height:380px}.floating-note{left:8px}.trust{grid-template-columns:1fr 1fr;gap:17px}.trust div:nth-child(2){border:0}.trust div{font-size:9px}section{padding:70px 0}.section-head h2{font-size:39px}.services{grid-template-columns:1fr}.service-img{height:260px}.feature-grid,.price-grid,.contact-grid{grid-template-columns:1fr}.feature-pics{height:330px}.feature-copy h2{font-size:42px}.gallery{grid-template-columns:1fr 1fr;grid-template-rows:180px 180px 180px}.gallery img:first-child{grid-row:auto;grid-column:1/3}.gallery img{height:100%}.contact-card{padding:25px}.demo-tag{right:8px;bottom:8px;font-size:8px}}
+</style>
+</head>
+<body>
+<div class="topbar">A little luxury, a little time for yourself · Appointments by enquiry</div>
+<header><div class="wrap"><nav>
+<a class="brand" href="#">maison <span>belle.</span></a>
+<div class="navlinks"><a href="#services">Treatments</a><a href="#story">Our studio</a><a href="#prices">Price list</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></div>
+<a class="btn" href="#contact">Book an appointment</a>
+</nav></div></header>
+<main>
+<div class="wrap"><section class="hero">
+<div class="hero-copy"><div class="eyebrow">Beauty · Care · Confidence</div><h1>Your beauty,<br><em>beautifully</em><br>considered.</h1>
+<p>Discover a calm and welcoming beauty studio where thoughtful treatments meet a little everyday luxury. Take a moment for yourself — you deserve it.</p>
+<div class="hero-actions"><a class="btn" href="#services">Explore treatments</a><a class="textlink" href="#story">Discover our studio</a></div></div>
+<div class="hero-gallery">
+<div class="mainpic"><img src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&w=900&q=85" alt="Elegant beauty salon interior"></div>
+<div class="smallpic"><img src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=650&q=85" alt="Nail care treatment"></div>
+<div class="smallpic"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=650&q=85" alt="Beauty and skincare products"></div>
+<div class="floating-note">A moment just for you.</div>
+</div></section>
+<div class="trust"><div>Personalised care</div><div>Relaxed atmosphere</div><div>Thoughtful details</div><div>Beauty your way</div></div></div>
+<section id="services"><div class="wrap"><div class="section-head"><div class="eyebrow">Our treatments</div><h2>Find your feel-good ritual.</h2><p>Explore a few of the services available at our concept studio. Each appointment is tailored to your preferences.</p></div>
+<div class="services">
+<article class="service-card"><div class="service-img"><img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=850&q=85" alt="Relaxing facial treatment"></div><div class="service-body"><div class="service-meta"><span>Skin</span><span>50 minutes</span></div><h3>Signature facial</h3><p>A refreshing facial experience focused on cleansing, hydration and a little relaxation.</p><div class="service-bottom"><span class="price">£55</span><a class="small-link" href="#contact">Enquire</a></div></div></article>
+<article class="service-card"><div class="service-img"><img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=850&q=85" alt="Beautiful manicure"></div><div class="service-body"><div class="service-meta"><span>Nails</span><span>45 minutes</span></div><h3>Classic manicure</h3><p>Nail shaping, cuticle care and your choice of a polished, timeless finish.</p><div class="service-bottom"><span class="price">£28</span><a class="small-link" href="#contact">Enquire</a></div></div></article>
+<article class="service-card"><div class="service-img"><img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=850&q=85" alt="Beauty makeup brushes"></div><div class="service-body"><div class="service-meta"><span>Makeup</span><span>60 minutes</span></div><h3>Soft glam makeup</h3><p>A polished makeup look for celebrations, events or whenever you feel like it.</p><div class="service-bottom"><span class="price">£65</span><a class="small-link" href="#contact">Enquire</a></div></div></article>
+</div></div></section>
+<section class="feature" id="story"><div class="wrap feature-grid">
+<div class="feature-pics"><img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=750&q=85" alt="Relaxing spa treatment room"><img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=750&q=85" alt="Peaceful spa interior"></div>
+<div class="feature-copy"><div class="eyebrow">The maison belle feeling</div><h2>Come in as you are. Leave feeling renewed.</h2><p>We believe a beauty appointment should be more than a service. It should be a chance to slow down, feel welcomed and enjoy care that feels personal.</p><ul class="checks"><li>A warm, friendly welcome</li><li>Time to talk through your preferences</li><li>Thoughtful treatments in a calm setting</li></ul><a class="btn" href="#contact">Meet your beauty moment</a></div>
+</div></section>
+<section class="price-section" id="prices"><div class="wrap"><div class="section-head"><div class="eyebrow">A guide to our menu</div><h2>Simple, thoughtful pricing.</h2><p>Example prices for this website concept. Final services and prices would be confirmed by the salon.</p></div>
+<div class="price-grid">
+<div class="price-group"><h3>Skin & beauty</h3><div class="price-row"><span>Express refresh facial</span><strong>£35</strong></div><div class="price-row"><span>Signature facial</span><strong>£55</strong></div><div class="price-row"><span>Luxury hydration facial</span><strong>£72</strong></div><div class="price-row"><span>Makeup application</span><strong>£65</strong></div><div class="price-row"><span>Special occasion makeup</span><strong>£85</strong></div></div>
+<div class="price-group"><h3>Nails & finishing touches</h3><div class="price-row"><span>Classic manicure</span><strong>£28</strong></div><div class="price-row"><span>Gel manicure</span><strong>£38</strong></div><div class="price-row"><span>Pedicure</span><strong>£42</strong></div><div class="price-row"><span>Brow shape</span><strong>£18</strong></div><div class="price-row"><span>Lash lift</span><strong>£48</strong></div></div>
+</div><p class="price-note">DEMO PRICES ONLY · Replace with the salon's confirmed service menu and prices before publishing.</p>
+</div></section>
+<section id="gallery"><div class="wrap"><div class="section-head"><div class="eyebrow">A glimpse inside</div><h2>The details make the difference.</h2><p>A visual moodboard for the studio experience.</p></div>
+<div class="gallery"><img src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&w=900&q=85" alt="Beauty studio interior"><img src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=650&q=85" alt="Nail treatment"><img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=650&q=85" alt="Facial treatment"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=650&q=85" alt="Beauty products"><img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=650&q=85" alt="Makeup tools"></div>
+</div></section>
+<section class="testimonial"><div class="wrap"><div class="eyebrow">A little note</div><div class="stars">★★★★★</div><p class="quote">“The best kind of beauty experience is one that makes you feel completely yourself.”</p><div class="reviewby">The Maison Belle philosophy · Concept copy</div></div></section>
+<section class="contact" id="contact"><div class="wrap"><div class="section-head"><div class="eyebrow">Your time starts here</div><h2>We'd love to welcome you.</h2><p>Questions about a treatment or ready to arrange a visit? Contact the studio and we'll help you with the next step.</p></div>
+<div class="contact-grid"><div class="contact-card"><h3>Visit the studio</h3><p>Address: Add confirmed salon address<br>Archway, London<br>Opening hours: To be confirmed</p></div><div class="contact-card"><h3>Make an enquiry</h3><p>Phone: Add the salon's confirmed number<br>Email: Add the salon's email address<br>Appointments by enquiry</p><a class="btn" href="mailto:hello@example.com">Email the studio</a></div></div>
+</div></section>
+</main>
+<footer><div class="wrap foot"><span>© 2026 Maison Belle Beauty Studio · Concept website demo</span><span>Illustrative services and prices · Not a real salon booking page</span></div></footer>
+<div class="demo-tag">Concept demo · Example prices</div>
+</body></html>
